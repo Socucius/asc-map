@@ -1,4 +1,4 @@
-app = angular.module('app', [])
+app = angular.module('app', ['templates'])
 app.config ['$routeProvider',
   ($routeProvider) ->
     $routeProvider.
