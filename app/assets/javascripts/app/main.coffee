@@ -1,9 +1,9 @@
-app = angular.module('app', ['templates'])
+app = angular.module('app', ['ngRoute','templates'])
 app.config ['$routeProvider',
   ($routeProvider) ->
     $routeProvider.
       otherwise({
-        templateUrl:
+        templateUrl: 'index.html'
         controller: 'HomeController'
       })
 ]
