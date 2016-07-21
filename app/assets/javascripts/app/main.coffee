@@ -1,4 +1,4 @@
-app = angular.module('app', ['ngRoute','templates'])
+app = angular.module('app', ['ngRoute','templates', 'asset-path'])
 app.config ['$routeProvider',
   ($routeProvider) ->
     $routeProvider.

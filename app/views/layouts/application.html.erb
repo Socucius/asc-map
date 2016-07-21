@@ -10,5 +10,12 @@
 
 <%= yield %>
 
+  <script>
+    angular.module('app').config(function(assetPathProvider) {
+      assetPathProvider.setAssets(
+        <%= File.read(Dir.glob('public/assets/manifest-*.json').last).html_safe rescue "{}" %>
+      )
+    })
+  </script>
 </body>
 </html>

@@ -18,6 +18,7 @@
   "dependencies": {
     "angular": "~1.5.7",
     "angular-route": null,
-    "bootstrap-sass-official": null
+    "bootstrap-sass-official": null,
+    "angular-asset-path": null
   }
 }
