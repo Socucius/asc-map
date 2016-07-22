@@ -1,5 +1,5 @@
 .header {
-  background-color: black;
+  background-color: #6F5499;
 }
 
 .header a {
@@ -9,7 +9,9 @@
 
 
 .header__bar {
-  li a {
+  border-bottom: none;
+  li:hover {
+    color:green;
     background-color: white;
   }
 }
