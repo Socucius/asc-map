@@ -1,0 +1,17 @@
+.header {
+  background-color: #6F5499;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.header__bar {
+  border-bottom: none;
+  li:hover {
+    color:green;
+    background-color: white;
+  }
+}
