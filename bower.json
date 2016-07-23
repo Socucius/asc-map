@@ -19,6 +19,7 @@
     "angular": "~1.5.7",
     "angular-route": null,
     "bootstrap-sass-official": null,
-    "angular-asset-path": null
+    "angular-asset-path": null,
+    "Hover": null
   }
 }
