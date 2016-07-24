@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'angular-rails-templates'
 gem 'activeadmin'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'devise', '~> 3.1'
 
 group :development, :test do
