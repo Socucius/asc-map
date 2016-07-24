@@ -1,5 +1,7 @@
 $(document).ready(function(){
-  ymaps.ready(init);
+  if($('#map').length > 0) {
+    ymaps.ready(init);
+  }
 
   function init() {
     var lat = $('#map').attr('data-lat')
