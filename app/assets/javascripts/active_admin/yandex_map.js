@@ -18,6 +18,12 @@ $(document).ready(function(){
       });
       map.geoObjects.add(placemark);
     }
+
+    map.events.add('click', function(e) {
+      var coords = e.get('coords');
+      $('#place_latitude').val(coords[0]);
+      $('#place_longitude').val(coords[1]);
+    });
     map.controls
     .remove('trafficControl')
     .remove('typeSelector')
