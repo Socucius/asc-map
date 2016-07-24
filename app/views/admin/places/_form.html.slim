@@ -10,6 +10,6 @@ script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"
   .hint You can click on the map to get this values or set them manually
   = f.inputs :latitude, :longitude
 
-  div#map[style="width: 100%; height: 400px"]
+  div#map[style="width: 100%; height: 400px" data-lat="#{@place.latitude}" data-lon="#{@place.longitude}"]
 
   = f.actions
