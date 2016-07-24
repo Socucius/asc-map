@@ -1,3 +1,3 @@
 class Place < ActiveRecord::Base
-  validates :title, :description, presence: true
+  validates :title, :description, :latitude, :longitude, presence: true
 end
