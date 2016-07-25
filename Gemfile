@@ -15,6 +15,7 @@ gem 'angular-rails-templates'
 gem 'activeadmin'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'unicorn'
 gem 'devise', '~> 3.1'
 
 
