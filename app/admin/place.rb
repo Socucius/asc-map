@@ -29,4 +29,17 @@ ActiveAdmin.register Place do
     actions
   end
 
+  show do
+    attributes_table do
+      row :title
+      row :description
+      div id: 'map', 'data-lat': resource.latitude, 'data-lon': resource.longitude
+      resource.images.each do |img|
+        div style: 'display: inline-block;' do
+          image_tag(img.file.thumb.url)
+        end
+      end
+    end
+  end
+
 end
