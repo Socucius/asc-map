@@ -1,6 +1,8 @@
 $(document).ready(function(){
   if($('#map').length > 0) {
-    ymaps.ready(init);
+    $.getScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU").done(function(){
+      ymaps.ready(init);
+    })
   }
 
   function init() {
