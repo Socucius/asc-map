@@ -19,7 +19,7 @@ ActiveAdmin.register Place do
       f.input :latitude
       f.input :longitude
     end
-    div id: 'map'
+    div id: 'map', 'data-lat': resource.latitude, 'data-lon': resource.longitude
     inputs do
       f.has_many :images, heading: 'Images', allow_destroy: true do |img|
         img.input :file, as: :file, hint: image_tag(img.object.file.thumb.url)
