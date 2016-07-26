@@ -11,7 +11,7 @@
 // about supported directives.
 //
 
-//= require jquery
+//= require jquery2
 //= require jquery_ujs
 //= require angular/angular
 //= require angular-route
