@@ -1,4 +1,5 @@
 ActiveAdmin.register Place do
+
   permit_params :title, :description, :latitude, :longitude, images_attributes: [:id, :file, :_destroy]
 
   index do
