@@ -8,5 +8,6 @@ RSpec.describe Place, type: :model do
     it { should validate_presence_of(:longitude) }
     it { should have_many(:images).dependent(:destroy) }
     it { should accept_nested_attributes_for(:images) }
+    it { should have_and_belong_to_many(:place_collections) }
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724180412) do
+ActiveRecord::Schema.define(version: 20160726125536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,20 @@ ActiveRecord::Schema.define(version: 20160724180412) do
   end
 
   add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id", using: :btree
+
+  create_table "place_collections", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "place_collections_places", id: false, force: :cascade do |t|
+    t.integer "place_id",            null: false
+    t.integer "place_collection_id", null: false
+  end
+
+  add_index "place_collections_places", ["place_collection_id", "place_id"], name: "place_collections_places_index", using: :btree
+  add_index "place_collections_places", ["place_id", "place_collection_id"], name: "places_place_collections_index", using: :btree
 
   create_table "places", force: :cascade do |t|
     t.string   "title"
