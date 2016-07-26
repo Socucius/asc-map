@@ -1,10 +1,16 @@
 .header {
-  background-color: #6F5499;
+  margin-bottom: -1%;
+  background-color: #717bff;
 }
 
-.header a {
-  color: white;
-  text-decoration: none;
+.header {
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: #717bff;
+  }
 }
 
 
