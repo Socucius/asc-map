@@ -1,6 +1,7 @@
 .header {
-  margin-bottom: -1%;
-  background-color: #717bff;
+  background-color: #6d6169;
+  margin-bottom: 0px;
+  border-radius: 0px;
 }
 
 .header {
@@ -8,16 +9,11 @@
     color: white;
     text-decoration: none;
   }
-  a:hover {
-    background-color: #717bff;
-  }
 }
 
-
 .header__bar {
-  border-bottom: none;
-  li:hover {
-    color:green;
-    background-color: white;
+  margin-top: 10px;
+  a:hover {
+    text-decoration: underline;
   }
 }

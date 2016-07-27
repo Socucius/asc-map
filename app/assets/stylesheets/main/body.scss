@@ -1,15 +1,23 @@
-.body {
-  background-color: #e3e1e8;
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+  .body__content {
+    margin-top: 5%;
+  }
 }
 
 .body__category {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 0px;
-  margin: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.body__category:hover {
-  border-bottom: 3px solid #717bff;
+  p:first-letter {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
 .body__button {
