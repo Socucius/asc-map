@@ -1,6 +1,11 @@
 html,
 body {
-  position: relative;
+  background-color: #e3e1e8;
+  background: image-url('back.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100%;
   font-size: 18px;
   font-family: 'PT Sans Narrow', sans-serif;
@@ -12,4 +17,8 @@ body {
 
 .is-black {
   color: black;
+}
+
+.is-textable {
+  font-size: 2vh;
 }
