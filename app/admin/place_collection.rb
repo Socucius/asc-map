@@ -12,6 +12,7 @@ ActiveAdmin.register PlaceCollection do
   show do
     attributes_table do
       row :title
+      h4 'Associated places'
       ul do
         resource.places.each do |place|
           li link_to place.title, admin_place_path(place)
