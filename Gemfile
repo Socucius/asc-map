@@ -18,6 +18,7 @@ gem 'mini_magick'
 gem 'unicorn'
 gem 'devise', '~> 3.1'
 gem 'rabl'
+gem 'oj'
 
 
 group :development, :test do
