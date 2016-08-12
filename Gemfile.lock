@@ -182,6 +182,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    oj (2.17.1)
     orm_adapter (0.5.0)
     pg (0.18.4)
     pkg-config (1.1.7)
@@ -197,6 +198,8 @@ GEM
       slop (~> 3.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
+    rabl (0.12.0)
+      activesupport (>= 2.3.14)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -338,10 +341,12 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
+  oj
   pg
   poltergeist
   pry
   quiet_assets
+  rabl
   rails (= 4.2.6)
   rspec-rails
   sass-rails (~> 5.0)

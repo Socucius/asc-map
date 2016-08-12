@@ -16,8 +16,10 @@
 //= require angular/angular
 //= require angular-route
 //= require angular-rails-templates
+//= require angular-resource
 //= require angular-asset-path
 //= require_tree ./templates
 //= require app/main
 //= require_tree ./app/controllers
+//= require_tree ./app/factories
 //= require bootstrap-sass-official

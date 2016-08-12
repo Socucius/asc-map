@@ -1,5 +1,5 @@
 angular.module('app').controller 'HomeController', [
-  '$scope',
-  ($scope) ->
-    console.log 'Initialized'
+  '$scope', 'categories'
+  ($scope, categories) ->
+    $scope.categories = categories
 ]
