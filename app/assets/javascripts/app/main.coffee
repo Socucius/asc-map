@@ -15,6 +15,6 @@ app.config ['$routeProvider'
         controller: 'HomeController'
         resolve:
           categories: (Category) ->
-            Category.query().$promise
+            Category.all()
       })
 ]
