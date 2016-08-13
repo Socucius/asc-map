@@ -14,7 +14,8 @@ app.config ['$routeProvider'
         templateUrl: 'index.html'
         controller: 'HomeController'
         resolve:
-          categories: (Category) ->
+          categories: ['Category', (Category) ->
             Category.all()
+          ]
       })
 ]
