@@ -16,7 +16,8 @@
 //= require angular/angular
 //= require angular-route
 //= require angular-rails-templates
-//= require angular-resource
+//= require lodash/dist/lodash.min
+//= require restangular
 //= require angular-asset-path
 //= require_tree ./templates
 //= require app/main
