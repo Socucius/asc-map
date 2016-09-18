@@ -2,19 +2,24 @@ angular.module('factories', [])
 dependencies = [
   'factories',
   'ngRoute',
-  'ngResource',
+  'restangular',
   'templates',
   'asset-path'
 ]
 app = angular.module('app', dependencies)
-app.config ['$routeProvider'
-  ($routeProvider) ->
+app.constant('_', window._)
+app.run ($rootScope) ->
+  $rootScope._ = window._
+app.config ['$routeProvider', 'RestangularProvider'
+  ($routeProvider, RestangularProvider) ->
+    RestangularProvider.setBaseUrl('/api/v1')
     $routeProvider.
       otherwise({
         templateUrl: 'index.html'
         controller: 'HomeController'
         resolve:
-          categories: (Category) ->
-            Category.all()
+          categories: ['Restangular', (Restangular) ->
+            Restangular.all('categories').getList()
+          ]
       })
 ]

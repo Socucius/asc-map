@@ -20,7 +20,7 @@
     "angular-route": null,
     "bootstrap-sass-official": null,
     "angular-asset-path": null,
-    "angular-resource": "~1.5.7",
+    "restangular": null,
     "Hover": null
   }
 }
