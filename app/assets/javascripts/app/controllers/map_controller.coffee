@@ -1,4 +1,4 @@
 angular.module('app').controller 'MapController', [
-  '$scope', '$rootScope'
-  ($scope, $rootScope) ->
+  '$scope', '$rootScope', 'places'
+  ($scope, $rootScope, places) ->
 ]
