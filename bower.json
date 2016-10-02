@@ -21,6 +21,7 @@
     "bootstrap-sass-official": null,
     "angular-asset-path": null,
     "restangular": null,
-    "Hover": null
+    "Hover": null,
+    "ngmap": null
   }
 }
