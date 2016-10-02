@@ -20,8 +20,8 @@ app.config ['$stateProvider', '$urlRouterProvider', 'RestangularProvider'
         templateUrl: 'map/index.html'
         controller: 'MapController'
         resolve:
-          places: ['Restangular', (Restangular) ->
-            
+          places: ['Restangular', '$stateParams', (Restangular, $stateParams) ->
+            Restangular.one('categories', $stateParams.categoryId).getList('places')
           ]
       })
       .state('home', {

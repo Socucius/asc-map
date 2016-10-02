@@ -5,6 +5,7 @@ class Category < ActiveRecord::Base
   has_and_belongs_to_many :place_collections
 
   def places
-    place_collections.map(&:places)
+    # TODO: Do it with SQL query
+    place_collections.map(&:places).flatten
   end
 end
