@@ -4,7 +4,8 @@ dependencies = [
   'ngRoute',
   'restangular',
   'templates',
-  'asset-path'
+  'asset-path',
+  'ngMap'
 ]
 app = angular.module('app', dependencies)
 app.constant('_', window._)
@@ -22,4 +23,7 @@ app.config ['$routeProvider', 'RestangularProvider'
             Restangular.all('categories').getList()
           ]
       })
+]
+app.run ['$rootScope', ($rootScope) ->
+  $rootScope.gmapsApi = "https://maps.google.com/maps/api/js"
 ]
