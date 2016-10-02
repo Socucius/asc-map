@@ -1,7 +1,7 @@
 angular.module('factories', [])
 dependencies = [
   'factories',
-  'ngRoute',
+  'ui.router',
   'restangular',
   'templates',
   'asset-path',
@@ -11,15 +11,17 @@ app = angular.module('app', dependencies)
 app.constant('_', window._)
 app.run ($rootScope) ->
   $rootScope._ = window._
-app.config ['$routeProvider', 'RestangularProvider'
-  ($routeProvider, RestangularProvider) ->
+app.config ['$stateProvider', '$urlRouterProvider', 'RestangularProvider'
+  ($stateProvider, $urlRouterProvider, RestangularProvider) ->
     RestangularProvider.setBaseUrl('/api/v1')
-    $routeProvider
-      .when('map/:categoryId', {
+    $stateProvider
+      .state('map', {
+        url: '/map/:categoryId'
         templateUrl: 'map/index.html'
         controller: 'MapController'
       })
-      .otherwise({
+      .state('home', {
+        url: '/'
         templateUrl: 'index.html'
         controller: 'HomeController'
         resolve:
@@ -27,6 +29,8 @@ app.config ['$routeProvider', 'RestangularProvider'
             Restangular.all('categories').getList()
           ]
       })
+    $urlRouterProvider.otherwise('/')
+
 ]
 app.run ['$rootScope', ($rootScope) ->
   $rootScope.gmapsApi = "https://maps.google.com/maps/api/js"

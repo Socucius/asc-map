@@ -22,6 +22,7 @@
     "angular-asset-path": null,
     "restangular": null,
     "Hover": null,
-    "ngmap": null
+    "ngmap": null,
+    "angular-ui-router": "0.3.1"
   }
 }
