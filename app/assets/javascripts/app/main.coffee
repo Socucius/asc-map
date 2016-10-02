@@ -14,8 +14,12 @@ app.run ($rootScope) ->
 app.config ['$routeProvider', 'RestangularProvider'
   ($routeProvider, RestangularProvider) ->
     RestangularProvider.setBaseUrl('/api/v1')
-    $routeProvider.
-      otherwise({
+    $routeProvider
+      .when('map/:categoryId', {
+        templateUrl: 'map/index.html'
+        controller: 'MapController'
+      })
+      .otherwise({
         templateUrl: 'index.html'
         controller: 'HomeController'
         resolve:
