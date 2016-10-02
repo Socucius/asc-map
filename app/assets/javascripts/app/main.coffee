@@ -19,6 +19,10 @@ app.config ['$stateProvider', '$urlRouterProvider', 'RestangularProvider'
         url: '/map/:categoryId'
         templateUrl: 'map/index.html'
         controller: 'MapController'
+        resolve:
+          places: ['Restangular', (Restangular) ->
+            
+          ]
       })
       .state('home', {
         url: '/'
