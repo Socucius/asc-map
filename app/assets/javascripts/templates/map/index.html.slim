@@ -1,1 +1,6 @@
-h2 map
+div map-lazy-load="https://maps.google.com/maps/api/js" MAP API CONSTANT
+  ng-map center="41,-87" zoom="3"
+    custom-marker ng-repeat=("place in places") on-click="click()" on-mouseout="mouseout()" on-mouseover="mouseover()" position="[{{place.longitude}},{{place.latitude}}]"
+      div class="{{cm.class}}"
+        div Custom Marker  {cm.class}
+        div Hello  {world}
