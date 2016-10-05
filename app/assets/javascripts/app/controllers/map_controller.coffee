@@ -7,9 +7,6 @@ angular.module('app').controller 'MapController', [
       angular.forEach places, (place, key) ->
         place.position = [parseInt(place.latitude), parseInt(place.longitude)]
 
-    convertPlacesPositions($scope.places)
-
-
     $scope.showPlace = (place) ->
       console.log place
       $uibModal.open({
@@ -19,8 +16,14 @@ angular.module('app').controller 'MapController', [
         templateUrl: 'place.html',
         controller: 'ShowPlaceController',
         size: 'lg',
-        resolve: {
-        }
-      });
+        resolve:
+          place: ['Restangular', '$stateParams', (Restangular, $stateParams) ->
+            Restangular.one('categories', $stateParams.categoryId).one('places', place.id).get()
+          ]
+      })
 
+
+    # init
+
+    convertPlacesPositions($scope.places)
 ]

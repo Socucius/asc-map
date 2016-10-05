@@ -1,6 +1,5 @@
 angular.module('app').controller 'ShowPlaceController', [
-  '$scope', '$uibModal'
-  ($scope, $uibModal) ->
-
-
+  '$scope', '$uibModal', 'place'
+  ($scope, $uibModal, place) ->
+    console.log place
 ]

@@ -5,6 +5,10 @@ class Api::V1::PlacesController < Api::V1::BaseController
     @places = @category.places
   end
 
+  def show
+    @place = Place.find(params[:id])
+  end
+
   private
 
   def set_category
