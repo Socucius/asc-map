@@ -13,11 +13,11 @@ angular.module('app').controller 'MapController', [
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: 'places/index.html',
+        templateUrl: 'places/show.html',
         controller: 'ShowPlaceController',
         size: 'lg',
         resolve:
-          place: ['Restangular', '$stateParams', (Restangular, $stateParams) ->
+          placeData: ['Restangular', '$stateParams', (Restangular, $stateParams) ->
             Restangular.one('categories', $stateParams.categoryId).one('places', place.id).get()
           ]
       })

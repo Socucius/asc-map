@@ -1,3 +1,7 @@
 .place
   .place__title ng-bind='place.title'
-  .place__description ng-bind='place.description'
+  .jumbotron.place__description ng-bind='place.description'
+  .row
+    .col-xs-6.col-md-3 ng-repeat='image in place.images'
+      a.thumbnail href=""
+        img ng-src='{{image.file.file.url}}'
