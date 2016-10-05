@@ -13,7 +13,7 @@ angular.module('app').controller 'MapController', [
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: 'place.html',
+        templateUrl: 'places/index.html',
         controller: 'ShowPlaceController',
         size: 'lg',
         resolve:
