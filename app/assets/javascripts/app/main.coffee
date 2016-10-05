@@ -1,20 +1,32 @@
 angular.module('factories', [])
 dependencies = [
   'factories',
-  'ngRoute',
+  'ui.router',
   'restangular',
   'templates',
-  'asset-path'
+  'asset-path',
+  'ngMap',
+  'ui.bootstrap'
 ]
 app = angular.module('app', dependencies)
 app.constant('_', window._)
 app.run ($rootScope) ->
   $rootScope._ = window._
-app.config ['$routeProvider', 'RestangularProvider'
-  ($routeProvider, RestangularProvider) ->
+app.config ['$stateProvider', '$urlRouterProvider', 'RestangularProvider'
+  ($stateProvider, $urlRouterProvider, RestangularProvider) ->
     RestangularProvider.setBaseUrl('/api/v1')
-    $routeProvider.
-      otherwise({
+    $stateProvider
+      .state('map', {
+        url: '/map/:categoryId'
+        templateUrl: 'map/index.html'
+        controller: 'MapController'
+        resolve:
+          places: ['Restangular', '$stateParams', (Restangular, $stateParams) ->
+            Restangular.one('categories', $stateParams.categoryId).getList('places')
+          ]
+      })
+      .state('home', {
+        url: '/'
         templateUrl: 'index.html'
         controller: 'HomeController'
         resolve:
@@ -22,4 +34,6 @@ app.config ['$routeProvider', 'RestangularProvider'
             Restangular.all('categories').getList()
           ]
       })
+    $urlRouterProvider.otherwise('/')
+
 ]

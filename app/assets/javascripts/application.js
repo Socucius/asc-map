@@ -14,7 +14,7 @@
 //= require jquery2
 //= require jquery_ujs
 //= require angular/angular
-//= require angular-route
+//= require angular-ui-router
 //= require angular-rails-templates
 //= require lodash/dist/lodash.min
 //= require restangular
@@ -24,3 +24,5 @@
 //= require_tree ./app/controllers
 //= require_tree ./app/factories
 //= require bootstrap-sass-official
+//= require ngmap
+//= require angular-bootstrap
