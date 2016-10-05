@@ -25,3 +25,4 @@
 //= require_tree ./app/factories
 //= require bootstrap-sass-official
 //= require ngmap
+//= require angular-bootstrap

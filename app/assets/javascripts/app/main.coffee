@@ -5,7 +5,8 @@ dependencies = [
   'restangular',
   'templates',
   'asset-path',
-  'ngMap'
+  'ngMap',
+  'ui.bootstrap'
 ]
 app = angular.module('app', dependencies)
 app.constant('_', window._)
