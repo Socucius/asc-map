@@ -36,6 +36,3 @@ app.config ['$stateProvider', '$urlRouterProvider', 'RestangularProvider'
     $urlRouterProvider.otherwise('/')
 
 ]
-app.run ['$rootScope', ($rootScope) ->
-  $rootScope.gmapsApi = "https://maps.google.com/maps/api/js"
-]
